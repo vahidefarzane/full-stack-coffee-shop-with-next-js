@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
 
 /* global start */
 
@@ -206,8 +205,17 @@ a {
 }
 /* Global End */
 
-
 /* Navbar Start */
+.navbar:before {
+  content: "";
+  display: block;
+  height: 30px;
+}
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 300;
+}
 
 .navbar main,
 .navbar_fixed main {
@@ -227,11 +235,7 @@ a {
   z-index: 9999;
   justify-content: space-between;
 }
-.navbar:before {
-  content: "";
-  display: block;
-  height: 30px;
-}
+
 .navbar_fixed main {
   height: 73px !important;
   box-shadow: none !important;
@@ -255,18 +259,14 @@ a {
     transform: none;
   }
 }
-.navbar {
-  position: absolute;
-  width: 100%;
-  z-index: 300;
-}
-.links {
+
+.navbar_links {
   display: flex;
   gap: 25px;
   align-items: unset;
   flex-direction: row-reverse;
 }
-.links li {
+.navbar_links li {
   list-style: none;
   font-size: 14px;
   font-weight: 500;
@@ -295,7 +295,7 @@ a {
   position: absolute;
 }
 
-.dropdown {
+.navbar_dropdown-menu {
   position: relative;
   display: inline-block;
   font-size: 13px;
@@ -303,15 +303,15 @@ a {
   padding-bottom: 0.5rem;
   font-family: "shabnam", Arial, Helvetica, sans-serif;
 }
-.dropdown a {
+.navbar_dropdown-menu a {
   display: flex;
   white-space: nowrap;
   align-items: center;
 }
-.dropdown_content a:hover {
+.navbar_dropdown_content a:hover {
   color: rgb(52, 24, 14);
 }
-.dropdown_content a {
+.navbar_dropdown_content a {
   padding-top: 8px;
   padding-bottom: 8px;
   cursor: pointer;
@@ -320,7 +320,7 @@ a {
   font-size: 14px;
   justify-content: right !important;
 }
-.dropdown_content {
+.navbar_dropdown_content {
   display: none !important;
   top: 20px;
   padding-top: 20px !important;
@@ -334,16 +334,428 @@ a {
   padding: 12px 20px;
   z-index: 1;
 }
-.dropdown_icons {
+.navbar_dropdown_icons {
   font-size: 0.7rem;
   position: relative;
   right: 3px;
   color: rgba(82, 82, 82, 0.45);
 }
 
-.dropdown:hover .dropdown_content {
+.navbar_dropdown-menu:hover .navbar_dropdown_content {
   display: flex !important;
 }
- 
 
 /* Navbar End */
+
+/* Newest products Start*/
+
+.newest-porduct_title {
+  color: black;
+  flex-direction: row-reverse;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  font-family: shabnam;
+  margin-top: 1.7rem;
+  align-items: center;
+}
+.newest-porduct_title p {
+  color: #114639;
+  font-size: 36px;
+}
+.newest-porduct_title span {
+  color: gray;
+}
+.newest-porduct_link {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 9px;
+}
+.newest-porduct_products {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+  padding: 20px 0px;
+  justify-content: space-between;
+}
+
+/* Newest products End*/
+
+/* Product Card Start */
+
+.product-card_wrapper {
+  width: 100%;
+  direction: rtl;
+  position: relative;
+  padding-top: 19px;
+  color: black;
+}
+.product-card_wrapper img {
+  width: 100%;
+  height: 312px;
+}
+.product-card_wrapper span {
+  color: rgb(52, 24, 14);
+}
+.product-card_header:hover img {
+  transform: scale(1.1);
+}
+.product-card_header img {
+  transition: 0.4s all ease-in;
+}
+.product-card_header {
+  position: relative;
+  margin-top: 5px;
+}
+.product-card_header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.product-card_header:hover::before {
+  opacity: 1;
+}
+.product-card_header:hover button {
+  visibility: visible;
+  left: 50%;
+  bottom: 50%;
+  height: max-content;
+  transform: translate(-50%, 50%);
+}
+.product-card_header:hover .product-card_header-icon {
+  visibility: visible;
+  left: 10px;
+}
+.product-card_header button {
+  cursor: pointer;
+  padding: 0.4rem 0.7rem;
+  bottom: 0;
+  transition: all 0.25s ease;
+  z-index: 3;
+  background: transparent;
+  left: 120px;
+  position: absolute;
+  visibility: hidden;
+  color: white;
+  width: max-content;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+.product-card_header-icon svg {
+  cursor: pointer;
+}
+.product-card_header-icon {
+  top: 10px;
+  left: 0;
+  color: white;
+  transition: all 0.25s ease;
+  font-size: 2rem;
+  display: grid;
+  gap: 10px;
+  z-index: 3;
+  position: absolute;
+  visibility: hidden;
+  background-color: transparent;
+}
+.product-card_header-tooltip {
+  font-size: 10px !important;
+  align-items: center;
+  opacity: 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 0 12px;
+  white-space: nowrap;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 34px;
+  position: relative;
+}
+.product-card_body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+  padding-top: 5px;
+  justify-content: center;
+}
+.product-card_body svg {
+  color: orange;
+}
+.product-card_body div {
+  direction: ltr;
+}
+.product-card_header-icon a,
+.product-card_header-icon div {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 4px;
+}
+.product-card_header-icon a:hover .product-card_header-tooltip,
+.product-card_header-icon div:hover .product-card_header-tooltip {
+  opacity: 1;
+}
+/* Product Card End */
+
+/* Promote Start */
+
+.promote-wrapper {
+  background-color: #f3f3f3;
+}
+.promote_section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.promote_section section {
+  font-family: shabnam;
+  color: black;
+  width: 50%;
+}
+.promote_section {
+  margin-top: 5rem;
+  text-align: right;
+  margin-bottom: 3rem;
+}
+.promote_section span {
+  color: #114639;
+  font-size: 32px;
+}
+.promote_section section:nth-child(1) {
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+.promote_section section:nth-child(1) p {
+  color: gray;
+  margin: 15px 0px 80px;
+  font-size: 15px;
+}
+.promote_section-club {
+  background-image: url("/images/clubset1.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  width: 60% !important;
+}
+
+.promote_section-club div {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  padding: 30px;
+  width: 411px;
+  background: white;
+}
+.promote_section-club p {
+  margin-top: 10px;
+}
+
+.promote_section-logo {
+  width: 80px;
+  margin-left: auto;
+}
+.promote_section-title {
+  color: #711d1c;
+  font-size: 44px;
+}
+
+.promote_section-why-coffee {
+  padding: 80px 30px;
+}
+.promote_section-why-coffee div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: right;
+}
+.promote_section-more {
+  background-color: #711d1c !important;
+  border: 1px solid #711d1c !important;
+  color: white !important;
+}
+.promote_section-why-coffee div button {
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  border: 1px solid gray;
+  margin-top: 2rem;
+  color: black;
+  background: white;
+  font-family: shabnam;
+}
+.promote_section-why-coffee p:nth-child(3) {
+  margin-top: 1rem;
+  direction: rtl;
+  line-height: 1.8rem;
+  color: gray;
+  font-size: 15px;
+}
+/* Promote  End */
+
+/* Article Card Start */
+
+.article-card_wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.article-card_wrapper:hover .article-card-img:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.7s ease;
+}
+.article-card_wrapper:hover .article-card-img:nth-child(1) {
+  transform: scale(1.03);
+}
+.article-card_wrapper .article-card-img:nth-child(1) {
+  position: relative;
+  display: block;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+  overflow: hidden;
+}
+
+.article-card_date span:nth-child(1) {
+  font-size: 20px;
+}
+
+.article-card_date {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0.3rem 0.5rem;
+  background: white;
+  display: grid;
+  border-radius: 4px;
+  color: black;
+}
+
+.article-card_details div img {
+  width: 20px;
+  border-radius: 20px;
+}
+
+.article-card_details div div span {
+  position: absolute;
+  font-size: 7px;
+  top: -5px;
+  left: -4px;
+  border-radius: 100%;
+  padding: 0.1rem 0.2rem 0;
+  background-color: rgb(52, 24, 14);
+}
+.article-card_details div div {
+  position: relative;
+}
+.article-card_details div svg {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.article-card_details div {
+  font-size: 14px;
+  color: gray;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.article-card_details {
+  width: 100%;
+  text-align: center;
+  transition: box-shadow 0.6s ease;
+  padding: 25px;
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    transparent 5%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  bottom: 0px;
+}
+
+.article-card_details-tag {
+  font-size: 13px;
+  background-color: rgb(52, 24, 14);
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+.article-card_details-title {
+  word-wrap: break-word;
+  margin: 10px 0;
+  line-height: 1.4;
+  display: block;
+  font-size: 23px;
+}
+.article-card_details-share {
+  position: relative;
+  bottom: 2px;
+}
+.article-card_details-share:hover .article-card_details-tootip {
+  opacity: 1;
+}
+
+.article-card_details-tootip svg {
+  font-size: 1rem !important;
+}
+.article-card_details-tootip {
+  position: absolute !important;
+  top: -35px;
+  background-color: black;
+  padding: 0.3rem 0.3rem 0;
+  border-radius: 4px;
+  z-index: 999;
+  opacity: 0;
+  color: white !important;
+  display: flex;
+  gap: 5px;
+}
+
+.article-card_details-tootip::before {
+  left: 50%;
+  content: "";
+  top: 100%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000 !important;
+}
+.article-card_details-tootip::before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+}
+
+/* Article Card End */
+
+/* Articles Start */
+.articles-wrapper {
+  max-width: 1222px;
+  margin: 0 auto;
+  direction: rtl;
+}
+.articles-wrapper main {
+  margin: 40px 0 90px;
+}
+.articles-title {
+  color: #114639;
+  font-size: 36px;
+}
+.articles-description {
+  color: gray;
+}
+
+/* Articles End */

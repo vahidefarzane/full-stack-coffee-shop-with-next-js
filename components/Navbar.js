@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaShoppingCart, FaRegHeart } from "react-icons/fa";
@@ -13,7 +12,7 @@ function Navbar() {
           </Link>
         </div>
 
-        <ul className="links">
+        <ul className="navbar_links">
           <li>
             <Link href="/">صفحه اصلی</Link>
           </li>
@@ -37,12 +36,12 @@ function Navbar() {
           </li> */}
 
           {/* Start My-account section */}
-          <div className="dropdown">
+          <div className="navbar_dropdown-menu">
             <Link href="/p-user">
-              <IoIosArrowDown className="dropdown_icons" />
+              <IoIosArrowDown className="navbar_dropdown_icons" />
               حساب کاربری
             </Link>
-            <div className="dropdown_content">
+            <div className="navbar_dropdown_content">
               <Link href="/p-user/orders">سفارشات</Link>
               <Link href="/p-user/tickets">تیکت های پشتیبانی</Link>
               <Link href="/p-user/comments">کامنت‌ها</Link>
