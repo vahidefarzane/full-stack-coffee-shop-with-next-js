@@ -494,6 +494,10 @@ a {
 .product-card_body div {
   direction: ltr;
 }
+.product-card_body-star {
+  display: flex;
+  justify-content: center;
+}
 .product-card_header-icon a,
 .product-card_header-icon div {
   display: flex;
@@ -759,3 +763,396 @@ a {
 }
 
 /* Articles End */
+
+/* Footer Start */
+
+.footer-wrapper {
+  background-color: rgb(17, 17, 17);
+  padding-top: 40px;
+}
+.footer-wrapper main {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.footer-wrapper h4 {
+  margin-bottom: 15px;
+  font-family: shabnam-Bold;
+}
+.footer-wrapper hr {
+  border-color: #676767;
+}
+.footer-descriptions {
+  width: 300px;
+  padding: 10px;
+  font-family: shabnam;
+  font-size: 15px;
+  direction: rtl;
+}
+.footer-descriptions_title {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.footer-descriptions_body {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  align-items: center;
+}
+.footer-descriptions_body:nth-child(3) p {
+  font-size: 15px;
+}
+/* .footer_article {
+  display: flex;
+  justify-content: right;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 0.5rem;
+} */
+/* .footer_article {
+  font-family: shabnam;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  flex-direction: row-reverse;
+  margin: 20px 0px;
+}
+.footer_article_title {
+  font-family: shabnam-Bold;
+} */
+
+.footer-links li {
+  list-style: none;
+  margin-top: 10px;
+  font-family: shabnam;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-links {
+  display: flex;
+  gap: 80px;
+  margin-right: 1rem;
+}
+
+.footer-licenses img:nth-child(4) {
+  margin-left: 1rem;
+}
+.footer-licenses img {
+  cursor: pointer;
+}
+.footer-licenses {
+  height: 200px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.footer-copyRight {
+  font-family: shabnam;
+  direction: rtl;
+  padding: 20px 0px;
+  font-size: 12px;
+  text-align: right;
+}
+.footer-copyRight svg {
+  position: relative;
+  top: 3.9px;
+  right: 1px;
+  font-size: 1.3rem;
+}
+
+/* Footer End */
+
+/* Scroll to top Start */
+
+.scroll-button,
+.scroll-buttonVisible {
+  position: fixed;
+  bottom: 2rem;
+  left: 1rem;
+  border-radius: 100%;
+  background: white;
+  border: 0;
+  color: black;
+  cursor: pointer;
+  font-size: 2rem;
+  outline: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
+  opacity: 0;
+  padding: 0.7rem 0.8rem 0rem;
+  transition-duration: 200ms;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-buttonVisible {
+  opacity: 1 !important;
+}
+
+/* Scroll to top End */
+
+/* Login-resgister Start */
+.login-register-wrapper {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(rgb(237, 230, 234), rgb(237, 230, 234));
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+}
+.component-wrapper {
+  width: 50%;
+}
+.login-register-wrapper section {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(52, 24, 14);
+}
+
+/* Login-resgister End */
+
+/* Forget Password Start */
+.forgot-password_wrapper {
+  z-index: 999;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(rgb(237, 230, 234), rgb(237, 230, 234));
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+}
+.forgot-password_wrapper section {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(52, 24, 14);
+}
+
+.forgot-password_main {
+  width: 50%;
+}
+.forgot-password-form_btn {
+  padding: 0.8rem;
+  cursor: pointer;
+  font-family: shabnam;
+  background-color: rgb(52, 24, 14);
+}
+.forgot-password_form {
+  display: grid;
+  background-color: white;
+  padding: 10px 25px;
+  width: 380px;
+  font-family: shabnam;
+  margin: 13rem auto 2rem;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+}
+
+.forgot-password_form-input {
+  font-family: shabnam;
+  padding: 13px;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+  border: 1px solid black;
+  direction: rtl;
+  margin-top: 20px;
+}
+.forgot-password_back-login-btn {
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.forgot-password_redirect-home-btn,
+.login_redirect-home-btn,
+.sms_redirect-home-btn {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  font-family: shabnam;
+  cursor: pointer;
+  font-size: 13px;
+  color: rgb(52, 24, 14);
+}
+
+/* Forget Password End */
+
+/* Register Start */
+.register_wrapper,
+.login_wrapper,
+.sms_wrapper {
+  display: grid;
+  background-color: white;
+  padding: 10px 25px;
+  width: 380px;
+  font-family: shabnam;
+  margin: 7rem auto 2rem;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+}
+
+.register_wrapper span,
+.login_wrapper span {
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.register_input,
+.login_input,
+.sms_input {
+  font-family: shabnam;
+  padding: 13px;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+  border: 1px solid black;
+  direction: rtl;
+  margin-top: 20px;
+}
+
+/* .register_btn-light {
+  color: rgb(109, 109, 109);
+  border: 1px solid rgb(214, 214, 214);
+  margin-bottom: 3rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-family: shabnam;
+  background: rgb(242, 242, 242);
+} */
+.register_btn {
+  padding: 0.8rem;
+  cursor: pointer;
+  color: white !important;
+  font-family: shabnam;
+  background-color: rgb(52, 24, 14);
+}
+/* .register_forgot-pass {
+  font-size: 13px;
+  margin: 15px 0;
+} */
+
+/* Register End */
+
+/* Login Start */
+
+.login-checkbox p {
+  font-size: 14px;
+  font-family: shabnam;
+}
+.login-checkbox {
+  display: flex;
+  margin: 20px 0 10px;
+  justify-content: right;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 6px;
+}
+
+.login-checkbox input {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 1px;
+  vertical-align: sub;
+
+  transform: translateY(-10%);
+
+  outline: none;
+}
+.login-checkbox input:checked {
+  background-color: rgb(52, 24, 14);
+  border-color: rgb(52, 24, 14);
+}
+.login-checkbox input:checked + label {
+  text-decoration: line-through;
+  color: #b3b3b3;
+  font-weight: 600;
+  background-color: #f7f7f7;
+}
+.login-checkbox input:checked:focus,
+.login-checkbox input:checked:hover {
+  box-shadow: 0 0 0 3px #d9d9d9;
+  border-color: rgb(52, 24, 14);
+}
+.login-checkbox input:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjZmZmZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCI+PHRpdGxlPmljb25fYnlfUG9zaGx5YWtvdjEwPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZyBmaWxsPSIjZmZmZmZmIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNi4wMDAwMDAsIDI2LjAwMDAwMCkiPjxwYXRoIGQ9Ik0xNy45OTk5ODc4LDMyLjQgTDEwLjk5OTk4NzgsMjUuNCBDMTAuMjI2Nzg5MSwyNC42MjY4MDE0IDguOTczMTg2NDQsMjQuNjI2ODAxNCA4LjE5OTk4Nzc5LDI1LjQgTDguMTk5OTg3NzksMjUuNCBDNy40MjY3ODkxNCwyNi4xNzMxOTg2IDcuNDI2Nzg5MTQsMjcuNDI2ODAxNCA4LjE5OTk4Nzc5LDI4LjIgTDE2LjU4NTc3NDIsMzYuNTg1Nzg2NCBDMTcuMzY2ODIyOCwzNy4zNjY4MzUgMTguNjMzMTUyOCwzNy4zNjY4MzUgMTkuNDE0MjAxNCwzNi41ODU3ODY0IEw0MC41OTk5ODc4LDE1LjQgQzQxLjM3MzE4NjQsMTQuNjI2ODAxNCA0MS4zNzMxODY0LDEzLjM3MzE5ODYgNDAuNTk5OTg3OCwxMi42IEw0MC41OTk5ODc4LDEyLjYgQzM5LjgyNjc4OTEsMTEuODI2ODAxNCAzOC41NzMxODY0LDExLjgyNjgwMTQgMzcuNzk5OTg3OCwxMi42IEwxNy45OTk5ODc4LDMyLjQgWiI+PC9wYXRoPjwvZz48L2c+PC9nPjwvc3ZnPg==");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.login-checkbox input:focus,
+.login-checkbox input:hover {
+  box-shadow: 0 0 0 3px #ebebeb;
+  border-color: #8c8c8c;
+}
+.login_btn-light {
+  color: rgb(109, 109, 109);
+  border: 1px solid rgb(214, 214, 214);
+  margin-bottom: 3rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-family: shabnam;
+  background: rgb(242, 242, 242);
+}
+.login-btn {
+  padding: 0.8rem;
+  cursor: pointer;
+  font-family: shabnam;
+  background-color: rgb(52, 24, 14);
+}
+
+.login_forgot-pass {
+  font-size: 13px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+/* Login End */
+
+/* SMS Start */
+.sms_btn {
+  padding: 0.8rem;
+  cursor: pointer;
+  font-family: shabnam;
+  background-color: rgb(52, 24, 14);
+}
+
+.sms_code-title {
+  font-size: 13px;
+  margin-top: 18px;
+  color: #6d6d6d;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+.sms_number {
+  font-size: 13px;
+  margin-top: 7px;
+  color: #6d6d6d;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+.sms_send-again-code {
+  font-size: 13px;
+  margin-top: 7px;
+  opacity: 0.6;
+  cursor: pointer;
+  white-space: nowrap;
+}
+/* SMS End */

@@ -3,8 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
-import Article from "./Article";
-
+import ArticleCard from "./ArticleCard";
 const Articles = () => {
   return (
     <div className="articles-wrapper">
@@ -23,31 +22,31 @@ const Articles = () => {
           className="mySwiper articles_slider"
         >
           <SwiperSlide>
-            <Article />
+            <ArticleCard />
           </SwiperSlide>
           <SwiperSlide>
-            <Article />
+            <ArticleCard />
           </SwiperSlide>
           <SwiperSlide>
-            <Article />
+            <ArticleCard />
           </SwiperSlide>
           <SwiperSlide>
-            <Article />
+            <ArticleCard />
           </SwiperSlide>
           <SwiperSlide>
-            <Article />
+            <ArticleCard />
           </SwiperSlide>
           <SwiperSlide>
-            <Article />
+            <ArticleCard />
           </SwiperSlide>
           <SwiperSlide>
-            <Article />
+            <ArticleCard />
           </SwiperSlide>
           <SwiperSlide>
-            <Article />
+            <ArticleCard />
           </SwiperSlide>
           <SwiperSlide>
-            <Article />
+            <ArticleCard />
           </SwiperSlide>
         </Swiper>
       </main>

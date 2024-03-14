@@ -1,26 +1,25 @@
 import React from "react";
-import styles from "@/styles/forget-password.module.css";
 import Link from "next/link";
 
 const ForgotPassword = () => {
   return (
     <>
-      <div className={styles.forgot_password}>
-        <div data-aos="fade-up" className={styles.bg}>
-          <div className={styles.form}>
+      <div className="forgot-password_wrapper">
+        <div data-aos="fade-up" className="forgot-password_main">
+          <div className="forgot-password_form">
             <input
-              className={styles.input}
+              className="forgot-password_form-input"
               type="text"
               placeholder="ایمیل / شماره موبایل"
             />
-            <button style={{ marginTop: "1rem" }} className={styles.btn}>
+            <button style={{ marginTop: "1rem" }} className="forgot-password_form-btn">
               بازنشانی رمزعبور
             </button>
-            <Link href={"/login-register"} className={styles.back_to_login}>
+            <Link href={"/login-register"} className="forgot-password_back-login-btn">
               برگشت به ورود
             </Link>
           </div>
-          <Link href={"/login-register"} className={styles.redirect_to_home}>
+          <Link href={"/login-register"} className="forgot-password_redirect-home-btn">
             لغو
           </Link>
         </div>

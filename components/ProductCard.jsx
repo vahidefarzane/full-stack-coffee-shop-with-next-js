@@ -30,7 +30,7 @@ const Productcard = () => {
           کپسول قهوه SETpresso سازگار با دستگاه نسپرسو ( RED ) 10 عددی LIMITED
           EDITION
         </Link>
-        <div>
+        <div className="product-card_body-star" >
           <FaStar />
           <FaStar />
           <FaStar />
